@@ -15,8 +15,11 @@ A = np.zeros((11,11))
 # --- put init conditions here --
 
 
-# Populate Array
-for i, temp in enumerate(T):
+
+# Populate Array with Discretized Values
+for i in range(10,119)
+    if(i%11 == 0 or (i-1)%11==0):
+        continue
     A[i//10, i%10-1] = (1/dx*dx)
     A[i//10, i%10+1] = (1/dx*dx)
     A[i//10 +1, i%10] = (1/dx*dx)
