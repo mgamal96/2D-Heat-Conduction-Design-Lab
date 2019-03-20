@@ -1,5 +1,5 @@
 import numpy as np
-from scipy.sparse.linalg import minres as solver
+from scipy.sparse.linalg import spsolve as solver
 np.set_printoptions(threshold=np.nan)
 
 # Constants
@@ -44,15 +44,12 @@ for i in range(11,110):
     A[i,i] = -2*(2/(dx*dx))
 
 # Populate Heated Block conditions
-for i, area in enumerate(heatedNodes):
-    for node in area:
-        B[node] = q[i]/k
+# for i, area in enumerate(heatedNodes):
+#     for node in area:
+#         B[node] = q[i]
 
-print(A.shape, B.shape)
-print(A)
-# exit()
 
 # Solve for T array
 T = solver(A, B)
-# T = np.linalg.solve(A,B)
+
 print(T)
