@@ -33,14 +33,20 @@ for i in range(10,120,11):
     A[i,i] = 1
 
 # Populate Array with Discretized Values
-for i in range(10,119):
-    if(i%11 == 0 or (i-1)%11==0):
+for i in range(11,110):
+    if(i%11 == 0 or (i+1)%11==0):
         continue
-    A[i//10, i%10-1] = (1/dx*dx)
-    A[i//10, i%10+1] = (1/dx*dx)
-    A[i//10 +1, i%10] = (1/dx*dx)
-    A[i//10 -1, i%10] = (1/dx*dx)
-    A[i//10, i%10] = -2*((1/dx*dx) + (1/dx*dx))
+    # A[i//10, i%10-1] = (1/dx*dx)
+    # A[i//10, i%10+1] = (1/dx*dx)
+    # A[i//10 +1, i%10] = (1/dx*dx)
+    # A[i//10 -1, i%10] = (1/dx*dx)
+    # A[i//10, i%10] = -2*((1/dx*dx) + (1/dx*dx))
+
+    A[i, i-1] = (1/dx*dx)
+    A[i, i+1 = (1/dx*dx)
+    A[i, i-11] = (1/dx*dx)
+    A[i, i+11] = (1/dx*dx)
+    A[i,i] = -2*((1/dx*dx) + (1/dx*dx))
 
 # Populate Heated Block conditions
 for i, area in enumerate(heated):
