@@ -1,1 +1,3 @@
-# 2D-Heat-Conduction-Design-Lab
+## Project Description
+
+Finite Difference Method code to obtain a heat map for a given circuit board design. 
