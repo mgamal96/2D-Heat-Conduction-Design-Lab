@@ -1,6 +1,7 @@
 ## Project Description
 
-Finite Difference Method code to obtain a heat map for a given circuit board design. Enter in Boundary conditions and Egen [Watts] for every component for use. (See example.py)
+Finite Difference Method code to obtain a heat map for a given circuit board design by solving **Heat-Diffusion Equation**. Enter in Boundary conditions and Egen [Watts] for every component for use. (See example.py)
+
 
 ## Sample Output
 
