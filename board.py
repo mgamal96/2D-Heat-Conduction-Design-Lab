@@ -114,7 +114,7 @@ class board(object):
 
         ax1 = plt.subplot(gs1[0])
         plt.title('Heat Contour Map')
-        plt.contourf(T .reshape(11,11) - 273, origin='upper'); plt.colorbar();
+        plt.contourf(T.reshape(self.rows, self.cols) - 273, origin='upper'); plt.colorbar();
         ax1.set_aspect('equal')
 
 
@@ -122,7 +122,7 @@ class board(object):
         plt.title('Circuit Board')
         hh = np.copy(self.heatedMask)
         hh[hh > 0] = 1
-        board = np.zeros((11,11,3), dtype=np.uint8) + np.array([[[0,255,0]]])
+        board = np.zeros((self.rows, self.cols,3), dtype=np.uint8) + np.array([[[0,255,0]]])
         board[hh == 1] = np.array([0,0,0])
         board = board.astype(np.uint8)
         plt.imshow(board, interpolation='nearest')
